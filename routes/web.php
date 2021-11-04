@@ -23,7 +23,9 @@ Route::post('/blog/store', 'BlogController@exeStore')->name('store');
 //ブログ詳細画面を表示
 Route::get('/blog/{id}','BlogController@showDetail')->name('show');
 
-
 // ブログ編集画面を表示
 Route::get('/blog/edit/{id}', 'BlogController@showEdit')->name('edit');
 Route::post('/blog/update', 'BlogController@exeUpdate')->name('update');
+
+//　ブログ削除
+Route::post('/blog/delete/{id}', 'BlogController@exeDelete')->name('delete');
